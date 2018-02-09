@@ -68,7 +68,35 @@
 	console.log('-----字符串模板-----');
 	let name = 'js-es6';
 	let info = 'hello world';
-	let m = `i am ${name}, ${info}`;
-	console.log(m);
-	
+	let s = `i am ${name}, ${info}`;
+	console.log(s);
+}
+
+{
+	console.log('-----es7 俩方法-----');
+	//padStart('返回字符串长度'，部位数字);
+	// 前补
+	console.log('1'.padStart(2, '0'));
+	// 后补
+	console.log('1'.padEnd(2, '0'));
+}
+
+{
+	console.log('-----字符串 标签模板-----');
+	let user = {
+		name: 'list',
+		info: 'hello world'
+	};
+	console.log(abc`i am ${user.name}, ${user.info}`);
+	function abc(s, v1, v2){
+		console.log(s, v1, v2);
+		return s + v1 + v2;
+	}
+
+}
+
+{
+	console.log('-----raw-----');
+	console.log(String.raw`Hi\n${1+2}`);
+	console.log(`Hi\n${1+2}`);
 }
