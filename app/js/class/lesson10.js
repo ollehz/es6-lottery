@@ -1,5 +1,6 @@
 {
-	console.log('-----数据解构-----');
+	console.log('-----数据结构-----');
+	console.log('Set WeakSet Map WeakMap 四种')
 }
 
 {
@@ -19,6 +20,7 @@
 
 {
 	// set数据类型的 元素是唯一的
+	// 代码不会报错 数据但不会生效
 	let list  = new Set();
 	list.add(1);
 	list.add(2);
@@ -32,7 +34,7 @@
 }
 
 {
-	// delete has clear add
+	// delete has clear add 方法
 	let arr = ['add', 'delete', 'clear', 'has'];
 	let list = new Set(arr);
 
@@ -46,7 +48,7 @@
 	// set实例的遍历
 	let arr = ['add', 'delete', 'clear', 'has'];
 	let list = new Set(arr);
-
+	// 元素名称
 	for(let key of list.keys()){
 		console.log('keys-', key);
 	}

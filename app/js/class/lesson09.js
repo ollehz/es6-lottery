@@ -24,15 +24,17 @@
 		'c': 456
 	};
 	console.log('obj', obj);
-
+	// 取不到 symbol作为key值的属性
 	for(let [key,value] of Object.entries(obj)){
 		console.log('let of', key, value);
 	}
 
+	// 可以取到属性值 symbol作为key值的属性 
 	Object.getOwnPropertySymbols(obj).forEach(function(item){
 		console.log(obj[item]);
 	})
 
+	// 都可以取到
 	Reflect.ownKeys(obj).forEach(function(item){
 		console.log('ownKeys', item, obj[item]);
 	})
